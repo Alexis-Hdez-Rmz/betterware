@@ -8,11 +8,10 @@ public class LoginPage  {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-
     // Elementos
-    private By username = By.xpath("//input[@placeholder= 'Escribe tu usuario']");
-    private By password = By.xpath("//input[@placeholder= 'Escribe tu contraseña']");
-    private By loginButton = By.xpath("//button[@data-testid= 'login__form__submit']");
+    private By username = By.id("username");
+    private By password = By.id("password");
+    private By loginButton = By.id("submit");
 
     public void enterUsername(String user) {
         driver.findElement(username).sendKeys(user);
